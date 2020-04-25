@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+/*Gobal*/
+body {
+    background: #dddddd;
+    font-family: sans-serif;
+    color: #ffffff;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/*--------   nav  ------*/
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #39414c;
+    border-bottom: 4px solid #a43517;
+    z-index: 4;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    padding: 30px 100px;
+    margin: auto;
+}
+
+
+
+.nav__logo-color {
+    color: #a43517;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    padding: 0 20px;
+}
+
+.nav__link {
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.nav__link--active {
+    color: #a43517;
+}
+
+.nav__link:hover {
+    color: #a43517;
+}
+
+/*---------   header   ----------*/
+
+.header {
+    margin-top: 90px;
+    position: relative;
+    background: center / cover url(img/header-bg.jpg);
+    background-attachment: fixed;
+    height: 550px;
+
+}
+
+.header::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(50, 95, 156, .5);
+    z-index: 1;
+}
+
+
+.header__container {
+    position: absolute;
+    max-width: 1600px;
+    top: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+
+}
+
+.header__motto {
+    max-width: 1600px;
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    padding: 130px 0 50px;
+
+}
+
+.header__description {
+    padding-bottom: 200px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 100px;
+}
+
+.subscribe-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: #39414c;
+    width: 100%;
+
+}
+
+.subscribe-bar__container {
+    display: flex;
+    max-width: 1600px;
+    margin: auto;
+    padding: 30px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.subscribe-bar__form {}
+
+.subscribe-bar__input {
+    height: 40px;
+    width: 400px;
+    border: none;
+    padding-left: 10px;
+}
+
+.subscribe-bar__button {
+    background-color: #a43517;
+    border: none;
+    color: #ffffff;
+    padding: 0 20px;
+    line-height: 40px;
+}
+
+.subscribe-bar__button:hover {
+    background: #b94929;
+}
+
+/*---------   main   ----------*/
+
+.main__container {
+    display: flex;
+    max-width: 1600px;
+    padding: 0 100px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+}
+
+.article__img {
+    height: 200px;
+    padding: 40px 0;
+}
+
+.article__title {}
+
+.article__description {
+    padding: 40px 10px;
+    line-height: 25px;
+    width: 400px;
+    text-align: center;
+}
+
+/*---------   footer   ----------*/
+
+.footer {
+    width: 100%;
+    margin-top: 20px;
+    background: #a43517;
+}
+
+.footer__description {
+    text-align: center;
+    line-height: 100px;
+}
+
+/*---------   madia query   ----------*/
+
+@media only screen and (max-width: 1200px) {
+
+    /*---------   header   ----------*/
+
+    .header {
+        height: 570px;
+    }
+
+    /*---------   header   ----------*/
+    .subscribe-bar__container {
+        flex-direction: column;
+        padding: 20px;
+        20px 30px 20px;
+    }
+
+    .subscribe-bar__description {
+        padding-bottom: 20px;
+    }
+
+    .subscribe-bar__input {
+        width: 250px;
+    }
+
+    /*---------   main   ----------*/
+    .main__container {
+        flex-flow: wrap;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    /*--------   nav  ------*/
+    .nav__container {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .nav__logo {
+        padding-bottom: 20px;
+    }
+
+    /*---------   header   ----------*/
+    .header {
+        height: 600px;
+        margin-top: 110px;
+    }
+
+    .header__motto {
+        font-size: 30px;
+
+        padding: 90px 10px 40px 10px;
+
+    }
+
+    .header__description {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    /*---------   header   ----------*/
+
+    .subscribe-bar__input {
+
+        width: 90vw;
+
+    }
+
+    .subscribe-bar__button {
+        width: 90vw;
+    }
+
+    /*---------   main   ----------*/
+    .article__description {
+        padding: 40px 10px;
+
+        width: 90vw;
+
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    /*---------   header   ----------*/
+    .header {
+        height: 650px;
+    }
+
+    .subscribe-bar__description {
+        font-size: 20px;
+    }
+}
