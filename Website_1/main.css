@@ -168,3 +168,169 @@
 .technology .imgBx img {
     max-width: 100%;
 }
+
+/* ------------------ Client ----------------- */
+
+.client {
+    background: #162c3b;
+    padding: 100px;
+    text-align: center;
+}
+
+.client .imgBx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.client .imgBx img {
+    max-width: 200px;
+    margin: 20px;
+    opacity: 0.25;
+    cursor: pointer;
+}
+
+.client .imgBx img:hover {
+    opacity: 1;
+}
+
+/* ------------------ Testimonals ------------------- */
+
+.testionials {
+    position: relative;
+    padding: 100px;
+    background: #12222d;
+    text-align: center;
+}
+
+.testionials .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.testionials .container .contentBx {
+    background: #fff;
+    padding: 60px 50px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.testionials .container .contentBx p {
+    font-style: italic;
+}
+
+.testionials .container .contentBx h3 {
+    width: 100%;
+    text-align: end;
+    font-weight: 500;
+    color: #3f8ffc;
+}
+
+/* ------------------ Contact ------------------- */
+
+.contact {
+    padding: 100px;
+    background: #162c3b;
+    text-align: center;
+}
+
+.imgBx2 {
+    background: url(assets/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+.redbg {
+    background: url(assets/red.jpg) !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.form .inputBx {
+    margin-bottom: 40px;
+}
+
+.form .inputBx input {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.form .inputBx input::placeholder {
+    color: #fff;
+}
+
+
+.form .inputBx textarea {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    min-height: 150px;
+    border-bottom: 2px solid #fff;
+}
+
+.form .inputBx textarea::placeholder {
+    color: #fff;
+}
+
+.form .inputBx input[type="submit"] {
+    width: 150px;
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+
+/* -------------- Footer ----------------- */
+
+.footer {
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer ul li a img {
+    filter: invert(1);
+    max-width: 20px;
+}
