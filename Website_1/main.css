@@ -106,3 +106,40 @@
     background-size: cover;
     background-position: center;
 }
+
+/* ------------- Services ---------------- */
+
+.services {
+    background: #12222d;
+    padding: 100px;
+    text-align: center;
+}
+
+.services .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.services .container .serviceBx {
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .container .serviceBx img {
+    max-width: 100px;
+}
+
+.services .container .serviceBx h2 {
+    font-weight: 500px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
