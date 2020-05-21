@@ -334,3 +334,100 @@
     filter: invert(1);
     max-width: 20px;
 }
+
+
+/* ----------------- Media --------------------- */
+
+@media (max-width: 991px) {
+
+    .banner {
+        padding: 50px;
+    }
+
+    .banner header {
+        padding: 20px 50px;
+    }
+
+    .banner .content h2 {
+        font-size: 36px;
+    }
+
+    .banner .content p {
+        font-size: 16px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .contentBx,
+    .about .imgBx {
+        width: 100%;
+        padding: 50px;
+        min-height: 400px;
+        text-align: center;
+    }
+
+    .services {
+        padding: 50px;
+    }
+
+    .services .container {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .services .container .serviceBx {
+        margin: 20px;
+        width: 300px;
+        height: 350px;
+    }
+
+    .technology {
+        padding: 50px;
+        padding-top: 300px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .technology .imgBx {
+        margin-top: 40px;
+        max-width: 250px;
+    }
+
+    .client {
+        padding: 50px;
+    }
+
+    .client .imgBx {
+        justify-content: center;
+    }
+
+    .testionials {
+        padding: 50px;
+    }
+
+    .testionials .contentBx {
+        padding: 60px 40px;
+        max-width: 550px;
+        margin-bottom: 40px;
+    }
+
+    .testionials .contentBx:last-child {
+        margin-bottom: 0px;
+    }
+
+    .contact {
+        padding: 50px;
+    }
+
+    .footer {
+        padding: 20px 50px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .footer ul {
+        margin-bottom: 20px;
+    }
+}
