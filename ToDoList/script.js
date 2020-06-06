@@ -1,4 +1,4 @@
-const listContainer = document.querySelector('[data-lists]')
+const listsContainer = document.querySelector('[data-lists]')
 const newListForm = document.querySelector('[data-new-list-form]')
 const newListInput = document.querySelector('[data-new-list-input]')
 const deleteListButton = document.querySelector('[data-delete-list-button]')
@@ -9,15 +9,14 @@ const tasksContainer = document.querySelector('[data-tasks]')
 const taskTemplate = document.getElementById('task-template')
 const newTaskForm = document.querySelector('[data-new-task-form]')
 const newTaskInput = document.querySelector('[data-new-task-input]')
-const clearCompleteTaskButton = document.querySelector('[ata-clear-complete-tasks-button]')
-
+const clearCompleteTasksButton = document.querySelector('[data-clear-complete-tasks-button]')
 
 const LOCAL_STORAGE_LIST_KEY = 'task.lists'
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId'
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 let selectedListId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY)
 
-listContainer.addEventListener('click', e => {
+listsContainer.addEventListener('click', e => {
     if (e.target.tagName.toLowerCase() === 'li') {
         selectedListId = e.target.dataset.listId
         saveAndRender()
@@ -26,7 +25,7 @@ listContainer.addEventListener('click', e => {
 
 tasksContainer.addEventListener('click', e => {
     if (e.target.tagName.toLowerCase() === 'input') {
-        const selectedList = list.find(list => list.id === selectedListId)
+        const selectedList = lists.find(list => list.id === selectedListId)
         const selectedTask = selectedList.tasks.find(task => task.id === e.target.id)
         selectedTask.complete = e.target.checked
         save()
@@ -34,7 +33,7 @@ tasksContainer.addEventListener('click', e => {
     }
 })
 
-clearCompleteTaskButton.addEventListener('click', e => {
+clearCompleteTasksButton.addEventListener('click', e => {
     const selectedList = lists.find(list => list.id === selectedListId)
     selectedList.tasks = selectedList.tasks.filter(task => !task.complete)
     saveAndRender()
@@ -94,10 +93,10 @@ function save() {
 }
 
 function render() {
-    clearElement(listContainer)
-    renderList()
-    const selectedList = lists.find(list => list.id === selectedListId)
+    clearElement(listsContainer)
+    renderLists()
 
+    const selectedList = lists.find(list => list.id === selectedListId)
     if (selectedListId == null) {
         listDisplayContainer.style.display = 'none'
     } else {
@@ -123,12 +122,12 @@ function renderTasks(selectedList) {
 }
 
 function renderTaskCount(selectedList) {
-    const incompleteTaskCount = selectedList.tasks.filter(task => !task.complete).lenght
+    const incompleteTaskCount = selectedList.tasks.filter(task => !task.complete).length
     const taskString = incompleteTaskCount === 1 ? "task" : "tasks"
     listCountElement.innerText = `${incompleteTaskCount} ${taskString} remaining`
 }
 
-function renderList() {
+function renderLists() {
     lists.forEach(list => {
         const listElement = document.createElement('li')
         listElement.dataset.listId = list.id
@@ -137,7 +136,7 @@ function renderList() {
         if (list.id === selectedListId) {
             listElement.classList.add('active-list')
         }
-        listContainer.appendChild(listElement)
+        listsContainer.appendChild(listElement)
     })
 }
 
