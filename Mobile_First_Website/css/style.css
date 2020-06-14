@@ -66,12 +66,13 @@ p {
 
 /* base styles */
 body {
-    background: var(--light);
     overflow-x: hidden;
+
 }
 
-.wrappre {
-    width: 100vw;
+.wrapper {
+    background: var(--light);
+    margin: 0 auto;
 }
 
 .nav {
@@ -174,6 +175,10 @@ body {
     width: 100%;
 }
 
+.contact {
+    padding-bottom: 1em;
+}
+
 .contact__header {
     padding: 20px 0;
     text-align: center;
@@ -183,9 +188,7 @@ body {
     margin: 0 10px;
 }
 
-.footer {
-    margin-top: 1em;
-}
+
 
 .footer__description {
     text-align: center;
@@ -198,10 +201,92 @@ body {
 
 
 /* small tablets styles */
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 600px) {
+    .home {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .home__image {
+        height: 100%;
+        width: 50%;
+        background-position: right;
+    }
+
+
+    .home__description {
+        height: 100%;
+        width: 50%;
+    }
+
+    .projects__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .project {
+        width: 46%;
+
+
+    }
+
+    .project__description {
+        margin-left: 5px;
+
+    }
+
+    .project__description-button {
+        background: var(--dark);
+        color: var(--light);
+        border: none;
+        padding: 3px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .projects__image-header {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+
+    .project__image-img {
+        background-size: cover;
+    }
+
+}
 
 /* large tablets and laptops styles */
-@media screen and (min-width: 960px) {}
+@media screen and (min-width: 960px) {
+    .nav {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 40%;
+    }
+
+    .nav__list-item .link {
+        cursor: pointer;
+    }
+
+    .nav__list-item .link:hover {
+        color: red;
+    }
+}
 
 /* desktop styles */
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        max-width: 1200px;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    }
+}
