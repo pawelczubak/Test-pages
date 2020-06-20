@@ -1,0 +1,17 @@
+.header {
+    text-align: center;
+}
+
+.button__container,
+.result__container {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.result__container {
+    border: 2px solid black;
+    height: 50px;
+    margin-top: 10px;
+}
